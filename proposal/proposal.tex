@@ -1,0 +1,66 @@
+\documentclass{article}
+
+\usepackage[doublespacing]{setspace}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{epigraph}
+
+\usepackage{listings}
+\usepackage{coloremoji}
+\usepackage{hyperref}
+
+\title{Voice Command Interface for Parrot A.R Drone}
+\author{Rushi Shah}
+
+\begin{document}
+
+	\begin{singlespace}
+		\maketitle
+		\setlength{\epigraphwidth}{0.35\textwidth}
+		\epigraph{``See no evil, hear no evil, speak no evil.''}{🙈🙉🙊}
+	\end{singlespace}
+
+	% \begin{abstract}
+	% Program a drone to respond to voice commands.
+	% \end{abstract}
+
+	\section{Problem/Purpose/Engineering Goals}
+	I aim to provide a voice command platform for the Parrot A.R Drone. These voice commands will be issued to either a web application on a desktop or through a mobile app by the user. The voice commands will be processed through a back-end written in Node.js, and may perhaps include computations such as computer vision or object tracking. The translated commands will then be sent to the drone to be executed.
+
+	% \section{Background}
+	% Here is the text of your Background.
+
+	\section{Research Techniques/Methods}
+	With the help of my project, users will be able to issue voice commands to either a web-app or a mobile-app to control a drone. In the case of a web-app, the user interface will include a video stream of from the drone in order to facilitate remote control. 
+
+	\section{Materials}
+
+	\subsection{Hardware Required}
+	\begin{description}
+	  \item[Parrot A.R Drone] \hfill \\
+	  Drone to be controlled through voice commands. 
+	  \item[Mobile Phone or Desktop/Laptop] \hfill \\
+	  The input vector for the user to issue their voice commands. 
+	\end{description}
+
+	\subsection{Software Required}
+	\begin{description}
+	  \item[NodeJS] \hfill \\
+	  The backend will be written in NodeJS. The backend will be responsible for recieving voice commands, processing them (as necessary), and transmitting the resulting command to the drone. 
+	  \item[Drone API] \hfill \\
+	  \url{https://github.com/felixge/node-ar-drone}
+
+	  This NodeJS API wrapper will be used to issue the translated commands to the drone. 
+
+	  \item[Mobile Phone Technology] \hfill \\
+	  If the voice commands are issued through an app, then the app must be programmed with Android (Java). 
+
+	  \item[Web Application Technology] \hfill \\
+	  If the voice commands are issued through a web app, then assorted web technologies (like HTML, and Javascript) will be utilized 
+	\end{description}
+
+	% \section{References}
+	% Here is the text of your References.
+
+\end{document}

@@ -10,7 +10,9 @@
 \usepackage{coloremoji}
 \usepackage{hyperref}
 
-\title{Voice Command Interface for Parrot A.R Drone}
+\title{Voice Controlled Data Collection Parrot A.R Drone}
+%Ten words or less that convey the main idea of what the reader is about to read. 
+
 \author{Rushi Shah}
 
 \begin{document}
@@ -21,46 +23,76 @@
 		\epigraph{``See no evil, hear no evil, speak no evil.''}{🙈🙉🙊}
 	\end{singlespace}
 
-	% \begin{abstract}
-	% Program a drone to respond to voice commands.
-	% \end{abstract}
+	\begin{abstract}
+	% In general, the abstract should be less than 100 words, and should specify what you intend to do, how to do it and the intended outcome. 
+	\subsection{Background information}
+	\subsection{What I intend to do}
+	\subsection{How I intend to do it}
+	\subsection{The intended outcome, impact}
+	\end{abstract}
 
 	\section{Problem/Purpose/Engineering Goals}
-	I aim to provide a voice command platform for the Parrot A.R Drone. These voice commands will be issued to either a web application on a desktop or through a mobile app by the user. The voice commands will be processed through a back-end written in Node.js, and may perhaps include computations such as computer vision or object tracking. The translated commands will then be sent to the drone to be executed.
+	%Clearly and succinctly articulate your goal. Are you tring to solve a prolem, create a technology or implement an application? This section should be 3-5 sentences. 
+	I aim to provide a voice controlled web interface for piloting a Parrot A.R Drone and remotely collecting atmospheric data. First of all, I will attach various atmospheric sensors to a microcontroller mounted on a Parrot A.R Drone. Then, I will implement a web application view and voice control interface for the drone and sensors to both pilot the drone and collect data remotely. 
 
-	% \section{Background}
-	% Here is the text of your Background.
+	\section{Background}
+	% Provide a complete and detailed explanation of the area of research, with referenced explanations. Provide the significance of pursuing this research. Explain any related theory. The section should be signifcant and detailed, and will be the major portion of this paper. 
+	\subsection{Preliminary Information}
+	Drones are an up and coming technology of remotely controlled aerial vehicles. The Parrot A.R Drone is a consumer version that exposes a control library (there is also a publically availible NodeJS wrapper on the library). Voice commands are often implemented for ease of use of various technologies like mobile phones, car climate controls, and music speakers. Atmoshperic data, like temperature and pressure, are typically collected through weather balloons and are almost always remotely controlled or preprogrammed. 
+	\subsection{Area of Research and Related Theory}
+	%Don't forget referened explanations
+	This project will span across three fields. First of all, it will include the drone control field that has been revolutionized by technologies like the Myo, Occulus Rift, and Kinect. Secondly, it will dabble in the field of voice commands for common technologies. For example, Siri is used to control phones and many cars have voice commands for tools like the radio and climate control. Thirdly, it will contribute to the atmospheric data analysis field. This research is typically conducted through weather balloons, but perhaps drones are the future of the field. 
+	\subsection{Significance}
+	This research will contribute to the prevalance of drones due to a more user-friendly control station. Since drones are becoming more common, the field will benefit from more varied options for controlling them, and thus this technology will fill that niche. It also will expand the voice command field by extending the functionality to drones. Furthermore, it will contribute to weather and atmospheric research by providing a novel method of collecting data (drones rather than weather balloons). 
+
 
 	\section{Research Techniques/Methods}
-	With the help of my project, users will be able to issue voice commands to either a web-app or a mobile-app to control a drone. In the case of a web-app, the user interface will include a video stream of from the drone in order to facilitate remote control. 
+	%Explain what your project will actually do, and how it will do it. Make sure to mention any resources, both material and equipment, that will be used. Present a reality-based strategy for implementation. 
+	\subsection{What it will do}
+	With the help of my project, users will be able to issue voice commands to a web-app to control the mounted sensors and pilot the drone. The web application will be responsible for recieving commands and displaying current sensor readings and the drone camera view. The collected sensor information can be stored for later analysis of the atmospheric data. 
+	\subsection{How it will do it}
+	Voice commands will be processed through a voice recognition API to translate the natural language entered into concrete drone and sensor commands. These commands will be transmitted to the drone through the drone's WiFi hotspot or to the mounted sensors. Throughout this process, the drone and sensors will constantly be sending back data to the user, such as the camera view and the sensor readings, which will be displayed for convenience in a web-app view. The middle-man between the user and the drone will be the NodeJS backend, which will facilitate transmitting data from the drone to the front-end and translating commands from the user's voice to the drone's API commands.  
 
 	\section{Materials}
-
-	\subsection{Hardware Required}
+	% List the equipment that you will use for the project, including where they will be acquired from and cost (if appropriate). 
+	% \subsection{Hardware Required}
 	\begin{description}
 	  \item[Parrot A.R Drone] \hfill \\
 	  Drone to be controlled through voice commands. 
-	  \item[Mobile Phone or Desktop/Laptop] \hfill \\
+	  \item[Desktop/Laptop] \hfill \\
 	  The input vector for the user to issue their voice commands. 
+	  \item[Microcontroller] \hfill \\
+	  Microcontroller will be attached to the drone, and will control the various attached sensors. 
+	  \item[Various Sensors] \hfill \\
+	  Sensors for various data collection, such as temperature, altitude, atmospheric pressure, etc.
+	  \item[Various Electronic Parts] \hfill \\
+	  Breadboard, wires, etc. to connect the microcontroller to the sensors. 
 	\end{description}
 
-	\subsection{Software Required}
-	\begin{description}
-	  \item[NodeJS] \hfill \\
-	  The backend will be written in NodeJS. The backend will be responsible for recieving voice commands, processing them (as necessary), and transmitting the resulting command to the drone. 
-	  \item[Drone API] \hfill \\
-	  \url{https://github.com/felixge/node-ar-drone}
+	% \subsection{Software Required}
+	% \begin{description}
+	%   \item[NodeJS] \hfill \\
+	%   The backend will be written in NodeJS. The backend will be responsible for recieving voice commands, processing them (as necessary), and transmitting the resulting command to the drone. 
+	%   \item[Drone API] \hfill \\
+	%   \url{https://github.com/felixge/node-ar-drone}
 
-	  This NodeJS API wrapper will be used to issue the translated commands to the drone. 
+	%   This NodeJS API wrapper will be used to issue the translated commands to the drone. 
 
-	  \item[Mobile Phone Technology] \hfill \\
-	  If the voice commands are issued through an app, then the app must be programmed with Android (Java). 
+	%   \item[Arduino C] \hfill \\
+	%   This language will be used to control the microcontroller and sensors.  
 
-	  \item[Web Application Technology] \hfill \\
-	  If the voice commands are issued through a web app, then assorted web technologies (like HTML, and Javascript) will be utilized 
-	\end{description}
+	%   \item[Web Application Technology] \hfill \\
+	%   If the voice commands are issued through a web app, then assorted web technologies (like HTML, and Javascript) will be utilized.
+	% \end{description}
 
-	% \section{References}
-	% Here is the text of your References.
+	\section{References}
+	% - meta glass hackathon project
+	% - oculus rift hackathon project
+	% - my hackathon project
+	% - phone application 
+	% - web application to control drone
+	% - kinect to control drone
+	% - siri (voice control)
+	% Reference items numerically and compile ordered list at the end of the text. Use APA style. 
 
 \end{document}

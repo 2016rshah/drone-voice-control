@@ -25,10 +25,13 @@
 
 	\begin{abstract}
 	% In general, the abstract should be less than 100 words, and should specify what you intend to do, how to do it and the intended outcome. 
-	\subsection{Background information}
-	\subsection{What I intend to do}
-	\subsection{How I intend to do it}
-	\subsection{The intended outcome, impact}
+
+	I intend to create a voice controlled web interface for piloting a Parrot A.R Drone and remotely collecting atmospheric data. The web interface will contain a live stream of the drone's camera, along with collecting voice commands from the user. These voice commands will control the drone's movements, but also control mounted sensors, like a barometer or thermometer, to begin or end data collection. This web interface for atmospheric sensor and drone control will aid researchers in remote data collection. 
+
+	% \subsection{Background information}
+	% \subsection{What I intend to do}
+	% \subsection{How I intend to do it}
+	% \subsection{The intended outcome, impact}
 	\end{abstract}
 
 	\section{Problem/Purpose/Engineering Goals}
@@ -38,10 +41,10 @@
 	\section{Background}
 	% Provide a complete and detailed explanation of the area of research, with referenced explanations. Provide the significance of pursuing this research. Explain any related theory. The section should be signifcant and detailed, and will be the major portion of this paper. 
 	\subsection{Preliminary Information}
-	Drones are an up and coming technology of remotely controlled aerial vehicles. The Parrot A.R Drone is a consumer version that exposes a control library (there is also a publically availible NodeJS wrapper on the library). Voice commands are often implemented for ease of use of various technologies like mobile phones, car climate controls, and music speakers. Atmoshperic data, like temperature and pressure, are typically collected through weather balloons and are almost always remotely controlled or preprogrammed. 
+	Drones are an up and coming technology of remotely controlled aerial vehicles. The Parrot A.R Drone is a consumer version that exposes a control library, which can be controlled with C. There is also a publicly availible NodeJS wrapper on the library \cite{droneapi}. Voice commands are often implemented for ease of use of various technologies like mobile phones, car climate controls, and music speakers \cite{sphinx}. Atmoshperic data, like temperature and pressure, are typically collected through weather balloons and are almost always remotely controlled or preprogrammed. 
 	\subsection{Area of Research and Related Theory}
 	%Don't forget referened explanations
-	This project will span across three fields. First of all, it will include the drone control field that has been revolutionized by technologies like the Myo, Occulus Rift, and Kinect \cite{kinect}. Secondly, it will dabble in the field of voice commands for common technologies. For example, Siri is used to control phones and many cars have voice commands for tools like the radio and climate control. Thirdly, it will contribute to the atmospheric data analysis field. This research is typically conducted through weather balloons, but perhaps drones are the future of the field. 
+	This project will span across three fields. First of all, it will include the drone control field that has been revolutionized by gesture recognition technologies like the Myo \cite{myo} or the Kinect \cite{kinect}. Secondly, it will dabble in the field of voice commands for common technologies. For example, Siri is used to control phones and many cars have voice commands for tools like the radio and climate control. Thirdly, it will contribute to the atmospheric data analysis field. This research is typically conducted through weather balloons, but perhaps drones are the future of the field. 
 	\subsection{Significance}
 	This research will contribute to the prevalance of drones due to a more user-friendly control station. Since drones are becoming more common, the field will benefit from more varied options for controlling them, and thus this technology will fill that niche. It also will expand the voice command field by extending the functionality to drones. Furthermore, it will contribute to weather and atmospheric research by providing a novel method of collecting data (drones rather than weather balloons). 
 
@@ -97,6 +100,12 @@
 	\begin{thebibliography}{1}
 
 		\bibitem{kinect} Jones, G. (2012, November 16). Kinect-drone. Retrieved September 24, 2015, from https://github.com/glennjones/kinect-drone
+
+		\bibitem{droneapi} Geisendörfer, F. (2012, July 21). Node AR Drone. Retrieved September 29, 2015, from https://github.com/felixge/node-ar-drone
+
+		\bibitem{sphinx} Cmusphinx/node-pocketsphinx. (2014, May 25). Retrieved September 29, 2015, from https://github.com/cmusphinx/node-pocketsphinx
+
+		\bibitem{myo} Controlling the Parrot AR.Drone 2.0 with the Myo™ Armband. (2013, October 2). Retrieved September 29, 2015, from http://developerblog.myo.com/controlling-the-parrot-ar-drone-2-0-with-the-myo-armband/
 
 	\end{thebibliography}
 
